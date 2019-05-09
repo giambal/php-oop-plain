@@ -16,6 +16,12 @@
       $this->prenotazione_id=$prenotazione_id;
       $this->pagante_id=$pagante_id;
     }
+
+    function printVal(){
+
+      echo "-" . $this->status . "<br>" .
+          "id-" .  $this->id . " : " . $this->price . "<br>" . "<br>";
+    }
   }
 
   $servername = "localhost";
@@ -94,7 +100,17 @@
     $conn->close();
 
     foreach ($accepted as $accPag) {
-      echo $accPag->id . ": " . $accPag->status . "-" . $accPag->price . "<br>";
+      $accPag->printVal();
+
+    }
+
+    foreach ($pending as $penPag) {
+      $penPag->printVal();
+
+    }
+
+    foreach ($rejected as $rejPag) {
+      $rejPag->printVal();
 
     }
 
