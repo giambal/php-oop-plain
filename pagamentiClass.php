@@ -19,8 +19,8 @@
 
     function printVal(){
 
-      echo "-" . $this->status . "<br>" .
-          "id-" .  $this->id . " : " . $this->price . "<br>" . "<br>";
+      echo  "-" . $this->status . "<br>" .
+            "id-" .  $this->id . " : " . $this->price . "<br>" . "<br>";
     }
   }
 
